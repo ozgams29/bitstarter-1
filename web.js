@@ -7,7 +7,7 @@ app.use(express.logger());
 var buff = new Buffer(100);
 
  app.get('/', function(request, response) {
-  buff.write(fs.readFileSync("index.html"));
+  buff = fs.readFileSync("index.html");
   response.send(buff.toString());
 });
 
